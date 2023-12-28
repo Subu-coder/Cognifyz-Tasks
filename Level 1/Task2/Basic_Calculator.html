@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <label for="first">Enter First Value</label>
+    <br>
+    <input type="number" name="value1" id="first">
+    <br><br>
+    <label for="first">Enter Second Value</label>
+    <br>
+    <input type="number" name="value2" id="second">
+    <br><br>
+    <input type="button" value="Add" onclick="add()">
+    <br><br><br>
+    <h2 id="answer"></h2>
+    <script>
+        function add(){
+            let value1=document.getElementById("first").value;
+            let value2=document.getElementById("second").value;
+            let answer=parseInt(value1)+parseInt(value2);
+            let ans=value1+" + "+value2+" = "+answer;
+            document.getElementById("answer").innerHTML="Answer: "+ans;
+        }
+    </script>
+</body>
+</html>

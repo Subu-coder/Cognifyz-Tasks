@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Changing Colors</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #change {
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <input type="button" value="Change" id="change">
+
+    <!-- Adding color change using script -->
+    <script>
+        let change = document.getElementById("change");
+        let count = 0;
+
+        change.onclick = function () {
+            coloring();
+        }
+
+        let coloring = () => {
+            let val1 = Math.floor(Math.random() * 256);
+            let val2 = Math.floor(Math.random() * 256);
+            let val3 = Math.floor(Math.random() * 256);
+            document.getElementById("body").style = "background-color:rgb(" + val1 + "," + val2 + "," + val3 + ")";
+        }
+    </script>
+</body>
+
+</html>

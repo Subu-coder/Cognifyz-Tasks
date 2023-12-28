@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: cadetblue;
+        }
+        #btn{
+            width: 200px;
+            height: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <button type="button" id="btn"> Greet Me </button>
+
+    <script>
+        document.getElementById("btn").onclick=() => {
+            greetings();
+        }
+
+        function greetings() {
+            const date = new Date();
+            let hour = date.getHours();
+            let min = date.getMinutes();
+            if(hour> 0 && hour < 4){
+                alert("Good Night");
+            } else if(hour >4 && hour <12){
+                alert("Good Morning");
+            } else if(hour >12 && hour < 16){
+                alert("Good Afternoon");
+            } else if(hour >16 && hour < 24){
+                alert("Good Evening");
+            }
+        }
+    </script>
+
+</body>
+</html>
