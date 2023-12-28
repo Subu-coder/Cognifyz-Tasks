@@ -6,6 +6,12 @@ body{
     height: 100vh;
     background-color: cadetblue;
 }
+
+h1{
+    text-align: center;
+    font-size: 42px;
+}
+
 img{    
     display: block;
     /* margin: 10px 0px; */
@@ -21,8 +27,8 @@ img{
 .slideshow{
     display: flex;
     /* gap: 10px; */
-    width: 700px;
-    height: 450px;
+    width: 600px;
+    height: 400px;
     border: 10px solid black;
     border-radius: 10px;
     overflow:hidden;
