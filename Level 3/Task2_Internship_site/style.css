@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* body{
+    background-color: aquamarine;
+} */
+hr{
+    border: 2px solid black;
+}
+header {
+    /* background-color: steelblue; */
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 10px 0px;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+p,li {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin: 10px;
+}
+form,textarea,input{
+    /* font-size: 1.2rem; */
+    font-size: 1rem;
+}
+
+ul li::marker {
+    content: '👉🏻';
+}
+
+.intro,
+.project-info,
+.qualification {
+    padding: 5px;
+    margin: 5px;
+}
+
+main {
+    margin: 5px;
+    padding: 5px;
+}
+
+
+#apply{
+    font-size: 1.4rem ;
+    text-align: center;
+}
+
+footer>*{
+    font-size: 1.2rem;
+    margin: 10px;
+}
