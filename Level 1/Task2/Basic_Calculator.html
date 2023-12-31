@@ -1,28 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Calculator</title>
-</head>
-<body>
-    <label for="first">Enter First Value</label>
-    <br>
-    <input type="number" name="value1" id="first">
-    <br><br>
-    <label for="first">Enter Second Value</label>
-    <br>
-    <input type="number" name="value2" id="second">
-    <br><br>
-    <input type="button" value="Add" onclick="add()">
-    <br><br><br>
-    <h2 id="answer"></h2>
-    <script>
-        function add(){
-            let value1=document.getElementById("first").value;
-            let value2=document.getElementById("second").value;
-            let answer=parseInt(value1)+parseInt(value2);
-            let ans=value1+" + "+value2+" = "+answer;
-            document.getElementById("answer").innerHTML="Answer: "+ans;
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
         }
-    </script>
+
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculation</h1>
+        <form>
+            <label for="first">Enter First Value</label>
+            <br>
+            <input type="number" name="value1" id="first" placeholder="First Value">
+            <br><br>
+            <label for="first">Enter Second Value</label>
+            <br>
+            <input type="number" name="value2" id="second" placeholder="Second Value">
+            <br><br>
+            <select id="selector">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="button" value="GET ANSWER" onclick="op()">
+        </form>
+        <br><br><br>
+        <h2 id="answer"></h2>
+        <script>
+            function op() {
+                const operation = document.getElementById("selector").value;
+                let value1 = document.getElementById("first").value;
+                let value2 = document.getElementById("second").value;
+                let ansContainer = document.getElementById("answer");
+                let ans;
+
+                if (value1.includes(".")) {
+                    value1 = parseFloat(value1);
+                    value2 = parseFloat(value2);
+                }
+                else {
+                    value1 = parseInt(value1);
+                    value2 = parseInt(value2);
+                }
+
+                switch (operation) {
+                    case "+":
+                        answer = value1 + value2;
+                        ans = value1 + " + " + value2 + " = " + answer;
+                        break;
+                    case "-":
+                        answer = value1 - value2;
+                        ans = value1 + " - " + value2 + " = " + answer;
+                        break;
+                    case "*":
+                        answer = value1 * value2;
+                        ans = value1 + " * " + value2 + " = " + answer;
+                        break;
+                    case "/":
+                        answer = value1 / value2;
+                        ans = value1 + " / " + value2 + " = " + answer;
+                        break;
+                    default:
+                        ansContainer.innerHTML = ans; //Undefined if something went wrong
+                        break;
+                    }
+                    if(isNaN(value1) || isNaN(value2)){
+                        ansContainer.innerHTML = "Value can not be empty";
+                    }
+                    else{
+                        ansContainer.innerHTML = "Answer: " + ans;
+                    }
+            }
+        </script>
+    </div>
 </body>
+
 </html>
