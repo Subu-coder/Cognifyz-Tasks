@@ -33,6 +33,7 @@ main>h2>a{
 body {
     background-color: #F8F9FF;
     overflow-x: hidden;
+    min-width:500px;
 }
 
 #main-heading {
