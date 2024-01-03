@@ -1,3 +1,5 @@
+<!-- Develop a basic button that changes its color when clicked using JavaScript. -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +23,7 @@
             width: 120px;
             height: 50px;
             border: 2px solid black;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -31,10 +34,9 @@
 
     <!-- Adding color change using script -->
     <script>
-        let change = document.getElementById("change");
-        let count = 0;
+        const change = document.getElementById("change");
 
-        change.onclick = function () {
+        change.onclick = ()=> {
             coloring();
         }
 
@@ -43,6 +45,7 @@
             let val2 = Math.floor(Math.random() * 256);
             let val3 = Math.floor(Math.random() * 256);
             document.getElementById("body").style = "background-color:rgb(" + val1 + "," + val2 + "," + val3 + ")";
+            change.style = "background-color:rgb(" + val2 + "," + val3 + "," + val1 + ")";
         }
     </script>
 </body>

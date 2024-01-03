@@ -38,27 +38,7 @@ body{
     cursor: pointer;
     
 }
-#about-details-1{
-    display: inline-block;
-    margin-top:50px;
-}
-#about-details-1>*{
-    display: inline-block;
-    margin: 20px 10px;
-}
-#about-details-1>div>*{
-    margin: 10px 0px;
-    /* padding: 10px 0px; */
-    
-}
-#image{
-    display: inline;
-    position: absolute;
-    top:15%;
-    right: 8%;
-}
-#image>img{
-    width: 180px;
-    border-radius: 12px;
 
+h1{
+    text-align: center;
 }
