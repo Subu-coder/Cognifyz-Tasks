@@ -12,11 +12,6 @@ h1{
     font-size: 42px;
 }
 
-img{    
-    display: block;
-    /* margin: 10px 0px; */
-    animation: slide 16s infinite;
-}
 
 .image-container{
     height: 100%;
